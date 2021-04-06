@@ -16,7 +16,7 @@ const values = data.reduce((values, { value }) => {
 ```
 Recommandation : bien que le code fonctionne, l'utilisation d'une fonction reduce est inutile.  Une fonction map serait beaucoup plus logique pour retourner les valeurs dans un array, si tel est l'objectif.
 
-Recommendation: although the code does work, the use of a reduce function is unnessasary and verbose, a map function would be much more logical to return the values into an array, if that is the perpose.
+Recommendation: although the code does work, the use of a reduce function is unnessasary and verbose, a map function would be much more logical to return the values into an array, if that is the purpose.
 
 ```js
 const values = data.map(({ value }) => value);
