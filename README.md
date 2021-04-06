@@ -10,9 +10,10 @@ const values = data.reduce((values, { value }) => {
   values.push(value);
   return values;
 }, []);
+```
+RECOMMENDATION: although the code does work, the use of a reduce function is unnessasary and verbose, a map function would be much more logical to return the values into an array if that is the perpose.
 
-// recommendation: although the code does work, the use of a reduce function is unnessasary and verbose, a map function would be much more logical to return the values into an array if that is the perpose.
-
+```js
 const newValues = data.map(({ value }) => value);
 
 ```
