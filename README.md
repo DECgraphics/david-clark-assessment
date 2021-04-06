@@ -14,7 +14,9 @@ const values = data.reduce((values, { value }) => {
   return values;
 }, []);
 ```
-Recommendation: although the code does work, the use of a reduce function is unnessasary and verbose, a map function would be much more logical to return the values into an array if that is the perpose.
+Recommendation: although the code does work, the use of a reduce function is unnessasary and verbose, a map function would be much more logical to return the values into an array, if that is the perpose.
+
+Recommandation : bien que le code fonctionne, l'utilisation d'une fonction reduce est inutile.  Une fonction map serait beaucoup plus logique pour retourner les valeurs dans un array, si tel est l'objectif.
 
 ```js
 const values = data.map(({ value }) => value);
@@ -35,7 +37,12 @@ async function analyzeIndexes() {
    return indexes;
 }
 ```
-Promise pattern and async await pattern seems to have been mixed and matched, recommendation seperate the concerns by using an async strategy or chaining promises
+Promise pattern and async await pattern seems to have been mixed and matched. 
+Recommendation: either use an async format or chain promises
+
+
+Le modèle Promise et le modèle async await semblent avoir été mélangés et assortis. 
+Recommandation : soit utiliser un format async, soit chain promises.
 
 ```js
 const getIndexes = () => fetch('https://api.coingecko.com/api/v3/indexes')
@@ -99,7 +106,9 @@ function getParagraphTexts() {
    return texts;
 }
 ```
-Recommendation: code could be simplyfied using a map function
+Recommendation: code could be simplified by using a map function
+
+Recommandation : le code pourrait être simplifié en utilisant une fonction map.
 
 ```js
 function getParagraphTexts() {
@@ -189,7 +198,9 @@ function getUserSettings(user) {
    return {};
 }
 ```
-Recommendation even if the code is correct it may be simplyfied to using one if statement
+Recommendation: Even if the code is correct it may be simplified by using one if statement
+
+Recommandation : même si le code est correct, il pourrait être simplifié en utilisant une If statement.
 
 ```js
 function getUserSettings(user) {
