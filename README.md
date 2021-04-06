@@ -11,7 +11,7 @@ const values = data.reduce((values, { value }) => {
   return values;
 }, []);
 ```
-RECOMMENDATION: although the code does work, the use of a reduce function is unnessasary and verbose, a map function would be much more logical to return the values into an array if that is the perpose.
+Recommendation: although the code does work, the use of a reduce function is unnessasary and verbose, a map function would be much more logical to return the values into an array if that is the perpose.
 
 ```js
 const newValues = data.map(({ value }) => value);
@@ -31,9 +31,10 @@ async function analyzeIndexes() {
    });
    return indexes;
 }
+```
+Promise pattern and async await pattern seems to have been mixed and matched, recommendation seperate the concerns by using an async strategy or chaining promises
 
-// Promise pattern and async await pattern seems to have been mixed and matched, recommendation seperate the concerns by using an async strategy or chaining promises
-
+```js
 const getIndexes = () => fetch('https://api.coingecko.com/api/v3/indexes')
 .then(res => res.json())
 .catch(_ => {
@@ -94,9 +95,10 @@ function getParagraphTexts() {
    });
    return texts;
 }
+```
+Recommendation: code could be simplyfied using a map function
 
-// recommendation: code could be simplyfied using a map function
-
+```js
 function getParagraphTexts() {
     return document.querySelectorAll("p").map(p => p);
 }
@@ -183,9 +185,10 @@ function getUserSettings(user) {
    }
    return {};
 }
+```
+Recommendation even if the code is correct it may be simplyfied to using one if statement
 
-// recommendation even if the code is correct it may be simplyfied to using one if statement
-
+```js
 function getUserSettings(user) {
     const project = getProject(user.id);
     const settings = getSettings(project.id);
